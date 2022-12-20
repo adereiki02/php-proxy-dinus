@@ -26,7 +26,7 @@ html body {
 
 #frm {
 	padding:10px 15px;
-	background-color:#FFC8C8;
+	background-color:#114D91;
 	
 	border:1px solid #818181;
 	
@@ -51,7 +51,7 @@ html body {
 <div id="container">
 
 	<div style="text-align:center;">
-		<h1 style="color:blue;">PHP-Proxy</h1>
+		<h1 style="color:#114D91;">PHP-Proxy</h1>
 	</div>
 	
 	<?php if(isset($error_msg)){ ?>
@@ -83,6 +83,10 @@ html body {
 
 <div id="footer">
 	Powered by <a href="//www.php-proxy.com/" target="_blank">PHP-Proxy</a> <?php echo $version; ?>
+</div>
+
+<div id="logout" style="padding-top:25px;">
+	<center><a href="./logout.php">Logout</a></center>
 </div>
 
 

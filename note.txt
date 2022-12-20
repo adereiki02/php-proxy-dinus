@@ -1,0 +1,11 @@
+http://academic.dinus.ac.id/api/login
+
+payload = {"nim": username, "password": password}
+headers = {"Content-Type": "application/x-www-form-urlencoded"}
+
+curl -X POST http://academic.dinus.ac.id/api/login
+   -H 'Content-Type: application/x-www-form-urlencoded'
+   -d '{"nim":"A11.2020.12345","password":"my_password"}'
+
+
+1. Buat interface login lalu menampilkan JSON

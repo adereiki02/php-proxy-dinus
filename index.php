@@ -1,6 +1,6 @@
 <?php
-
 define('PROXY_START', microtime(true));
+
 
 require("vendor/autoload.php");
 
@@ -11,11 +11,18 @@ use Proxy\Proxy;
 // start the session
 session_start();
 
+// Check if the user is logged in, if not then redirect him to login page
+if( !isset($_SESSION["login"]) ){
+    header("Location: login.php");
+    exit;
+}
+
 // load config...
 Config::load('./config.php');
 
 // custom config file to be written to by a bash script or something
 Config::load('./custom_config.php');
+Config::load('./cookies.php');
 
 if (!Config::get('app_key')) {
     die("app_key inside config.php cannot be empty!");
@@ -30,6 +37,7 @@ if (Config::get('url_mode') == 2) {
     Config::set('encryption_key', md5(Config::get('app_key') . $_SERVER['REMOTE_ADDR']));
 } elseif (Config::get('url_mode') == 3) {
     Config::set('encryption_key', md5(Config::get('app_key') . session_id()));
+    //Config::set('encryption_key', md5(Config::get('app_key') . $_SERVER['REMOTE_ADDR']));
 }
 
 // very important!!! otherwise requests are queued while waiting for session file to be unlocked
