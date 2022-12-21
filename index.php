@@ -22,7 +22,6 @@ Config::load('./config.php');
 
 // custom config file to be written to by a bash script or something
 Config::load('./custom_config.php');
-Config::load('./cookies.php');
 
 if (!Config::get('app_key')) {
     die("app_key inside config.php cannot be empty!");

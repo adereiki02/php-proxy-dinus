@@ -18,9 +18,9 @@ No Javascript interpreters, no calls to shell... nothing but pure PHP with no he
 
 That's all there is to it!
 
-## :new: Update -- December 30, 2019!
+## :new: Update -- January 26, 2020!
 
-Finally figured it out. 
+Updated to work with the January changes to YouTube.  
 As of right now, this is probably the only working 
 PHP-based youtube downloader out there.
 
@@ -29,11 +29,11 @@ Demo
 
 Just to prove its reliability and the fact that it works even with YouTube videos that encrypt their signature, visit this URL:  
 
-https://api.unblockvideos.com/youtube_downloader?id=e-ORhEE9VVg&selector=mp4&code=secret  
-  
+https://api.unblockvideos.com/youtube_downloader?id=e-ORhEE9VVg&selector=mp4
+
 Or stream it directly:
 
-https://api.unblockvideos.com/youtube_downloader?id=e-ORhEE9VVg&selector=mp4&redirect=true&code=secret
+https://api.unblockvideos.com/youtube_downloader?id=e-ORhEE9VVg&selector=mp4&redirect=true
 
 ~~Works with Age-Restricted videos too~~  
 
